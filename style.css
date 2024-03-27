@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+  --var-bg-clr:rgb(11,102,106);
+  --var-blue:rgb(14,41,84);
+  --var-blue-options:rgb(21,41,84);
+  --var-selected-btn:rgb(243,170,96);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  background-color: var(--var-bg-clr);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* reset */
+.reset{
+  width: 100%;
+  text-align: right;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+.btn{
+  font-size: 1rem;
+  background-color: var(--var-blue);
+  color: white;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--var-blue);
+  border-radius: 0.5rem;
+}
+
+/* container */
+.container{
+  background-color: var(--var-blue);
+  width: 40rem;
+  padding: 2rem;
+  border: 1px solid var(--var-blue);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* question */
+.question{
+  font-size: 1.2rem;
+}
+
+/* options-container */
+.options-container{
+  width: 100%;
+  height: 7.5rem;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 1rem;
+  column-gap: 2rem;
+}
+
+/* options starts here!! */
+.option1{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.option2  {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.option3{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.option4{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.options-container button{
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--var-blue-options);
+  padding-left: 1rem;
+  border: 1px solid;
+  border-radius: 1rem;
+}
+/* option btn color */
+.option-btn{
+  background-color: white;
+  border-color: white;
+}
+/* icons */
+.btn-icons{
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* btn disabled */
+.disabled-btn{
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* selected btn */
+.selected-btn{
+  background-color: var(--var-selected-btn);
+  border-color: var(--var-selected-btn);
+}
